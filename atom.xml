@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>光の自传</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-02-12T03:36:41.869Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>杨琦</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客整体功能测试</title>
+    <link href="http://example.com/2021/02/11/blog_test/"/>
+    <id>http://example.com/2021/02/11/blog_test/</id>
+    <published>2021-02-11T05:47:06.665Z</published>
+    <updated>2021-02-12T03:36:41.869Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="苏打绿"><a href="#苏打绿" class="headerlink" title="苏打绿"></a>苏打绿</h1><p>苏打绿（Sodagreen），中国台湾乐团，由吴青峰、史俊威、谢馨仪、龚钰祺、刘家凯、何景扬组成。2001年成立于校园。2003年确立6人阵容。2004年5月正式出道，发行第一张单曲《空气中的视听与幻觉》。2005年发行了《SodaGreen》。2006年发行专辑《小宇宙》。2007年获得第18届台湾金曲奖最佳乐团奖。2008年获得第19届台湾金曲奖最佳乐团奖。2013年发行的专辑《秋：故事》成为2013年度iTunes Store最受欢迎专辑。2014年举办十周年世界巡回演唱会。2016年获得第27届台湾金曲奖最佳国语专辑奖、最佳乐团奖、最佳编曲人奖、最佳作词人奖和最佳专辑制作人奖，获奖后宣布在2017年起休团三年。2020年2月24日凌晨，苏打绿经过三年休团后发文宣布回归；7月3日，鱼丁糸作为苏打绿的分身正式官宣。</p><a id="more"></a><h2 id="韦瓦第计划"><a href="#韦瓦第计划" class="headerlink" title="韦瓦第计划"></a>韦瓦第计划</h2><p>韦瓦第计划（Project Vivaldi），由台湾知名乐团苏打绿发起，灵感来源于以音乐呈现文字、写出了四季小提琴协奏曲的18世纪初古协奏曲之父-安东尼奥·维瓦尔第。苏打绿以“One Season, One Concept”，四个季节，四座城市，用四种情绪制作四张专辑，发动跨国“音”谋，打造完全“苏打绿”的曲风。四张专辑由林暐哲音乐社制作、环球国际唱片股份有限公司发行。</p><h2 id="公式测试"><a href="#公式测试" class="headerlink" title="公式测试"></a>公式测试</h2><div>$$\hat{x}_{k}=\hat{x}_{k}^{-}+K_{t}\left(y_{k}\right)$$</div><h2 id="画廊功能测试"><a href="#画廊功能测试" class="headerlink" title="画廊功能测试"></a>画廊功能测试</h2><div class="justified-gallery"><img src="/figures/gallery/soda1.jfif" alt="sodagreen" /><img src="/figures/gallery/soda2.jfif" alt="sodagreen" /><img src="/figures/gallery/soda3.jfif" alt="sodagreen" /></div><h2 id="pdf文件测试"><a href="#pdf文件测试" class="headerlink" title="pdf文件测试"></a>pdf文件测试</h2><div class="row">    <embed src="/pdf/dissertation.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;苏打绿&quot;&gt;&lt;a href=&quot;#苏打绿&quot; class=&quot;headerlink&quot; title=&quot;苏打绿&quot;&gt;&lt;/a&gt;苏打绿&lt;/h1&gt;&lt;p&gt;苏打绿（Sodagreen），中国台湾乐团，由吴青峰、史俊威、谢馨仪、龚钰祺、刘家凯、何景扬组成。2001年成立于校园。2003年确立6人阵容。2004年5月正式出道，发行第一张单曲《空气中的视听与幻觉》。2005年发行了《SodaGreen》。2006年发行专辑《小宇宙》。2007年获得第18届台湾金曲奖最佳乐团奖。2008年获得第19届台湾金曲奖最佳乐团奖。2013年发行的专辑《秋：故事》成为2013年度iTunes Store最受欢迎专辑。2014年举办十周年世界巡回演唱会。2016年获得第27届台湾金曲奖最佳国语专辑奖、最佳乐团奖、最佳编曲人奖、最佳作词人奖和最佳专辑制作人奖，获奖后宣布在2017年起休团三年。2020年2月24日凌晨，苏打绿经过三年休团后发文宣布回归；7月3日，鱼丁糸作为苏打绿的分身正式官宣。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="分类功能测试" scheme="http://example.com/categories/%E5%88%86%E7%B1%BB%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="标签功能测试" scheme="http://example.com/tags/%E6%A0%87%E7%AD%BE%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+</feed>
