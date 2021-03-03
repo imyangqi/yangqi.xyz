@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-02T14:59:31.445Z</updated>
+  <updated>2021-02-18T11:14:59.594Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,123 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2021/03/02/english_writing/"/>
-    <id>http://example.com/2021/03/02/english_writing/</id>
-    <published>2021-03-02T14:59:31.445Z</published>
-    <updated>2021-03-02T14:59:31.445Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2021/03/02/english_grammar/"/>
-    <id>http://example.com/2021/03/02/english_grammar/</id>
-    <published>2021-03-02T14:58:58.651Z</published>
-    <updated>2021-03-02T14:58:58.651Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2021/03/02/mathematical_physics_method/"/>
-    <id>http://example.com/2021/03/02/mathematical_physics_method/</id>
-    <published>2021-03-02T14:57:55.658Z</published>
-    <updated>2021-03-02T14:57:55.658Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2021/03/02/antenna_theory/"/>
-    <id>http://example.com/2021/03/02/antenna_theory/</id>
-    <published>2021-03-02T14:57:00.567Z</published>
-    <updated>2021-03-02T14:57:00.567Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2021/03/02/electromagnetic_fields/"/>
-    <id>http://example.com/2021/03/02/electromagnetic_fields/</id>
-    <published>2021-03-02T14:55:58.014Z</published>
-    <updated>2021-03-02T14:55:58.014Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2021/03/02/algorithm/"/>
-    <id>http://example.com/2021/03/02/algorithm/</id>
-    <published>2021-03-02T14:55:01.236Z</published>
-    <updated>2021-03-02T14:55:01.236Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2021/03/02/data_structure/"/>
-    <id>http://example.com/2021/03/02/data_structure/</id>
-    <published>2021-03-02T14:53:40.324Z</published>
-    <updated>2021-03-02T14:53:40.324Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2021/03/02/cpp_grammar/"/>
-    <id>http://example.com/2021/03/02/cpp_grammar/</id>
-    <published>2021-03-02T14:52:55.866Z</published>
-    <updated>2021-03-02T14:52:55.866Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2021/03/02/leetcode_problems/"/>
-    <id>http://example.com/2021/03/02/leetcode_problems/</id>
-    <published>2021-03-02T14:51:30.618Z</published>
-    <updated>2021-03-02T14:51:30.618Z</updated>
-    
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>电磁场数值计算中常用到的一些常数</title>
@@ -184,16 +67,12 @@
     <link href="http://example.com/2021/02/13/design_pattern_cpp/"/>
     <id>http://example.com/2021/02/13/design_pattern_cpp/</id>
     <published>2021-02-12T16:00:00.000Z</published>
-    <updated>2021-03-03T15:45:08.918Z</updated>
+    <updated>2021-03-03T15:48:52.498Z</updated>
     
-    <content type="html"><![CDATA[<p>我们在写一个程序之前，就要考虑到程序的可维护性、可复用性、可扩展性，还有灵活性。面向对象的分析设计编程思想，可以通过封装、继承、多态把程序的耦合度降低，用设计模式使得程序更加灵活，容易修改，并且易于复用。</p><h1 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h1><p>想象一下这样的场景：客户要求用C++面向对象语言实现一个计算器控制台程序，要求输入两个数和运算符号，并且得到结果。</p><h2 id="业务的封装"><a href="#业务的封装" class="headerlink" title="业务的封装"></a>业务的封装</h2><p>首先考虑一个计算器，展示给用户看到的界面，只有数字和一些运算符，用户操作通常是不同数字和操作符的组合，将其称之为界面逻辑；在程序进行具体计算的过程中，分为多种情况考虑，实现运算的过程称之为业务逻辑。程序设计的原则之一是将业务逻辑与界面逻辑分开，让他们之间的耦合度降低。</p><h2 id="让程序松耦合"><a href="#让程序松耦合" class="headerlink" title="让程序松耦合"></a>让程序松耦合</h2><p>设计程序要尽量做到松耦合，在本案例中应该把加减乘除等运算分离，修改其中一个不会影响到其他的操作符，增加运算算法也不会影响其他代码。首先，是设计一个运算类，它有两个<code>Number</code>属性，主要用于计算前后数，然后有一个虚方法<code>get_result()</code>，用于获得结果。具体的加减乘除写出运算类的子类，然后继承它，重写<code>get_result()</code>方法，这样的话，如果修改任意一个算法，就不需要提供其他算法的代码。</p><p>运算类：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Operation</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">Operation() :numA_(<span class="number">0</span>), numB_(<span class="number">0</span>) &#123;&#125;</span><br><span class="line"><span class="keyword">virtual</span> ~Operation() &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_numA</span><span class="params">()</span><span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> numA_; &#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_numB</span><span class="params">()</span><span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> numB_; &#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">set_numA</span><span class="params">(<span class="keyword">double</span> a)</span> </span>&#123; numA_ = a; &#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">set_numB</span><span class="params">(<span class="keyword">double</span> b)</span> </span>&#123; numB_ = b; &#125;</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">double</span> <span class="title">get_result</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> <span class="number">0</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="keyword">double</span> numA_;</span><br><span class="line"><span class="keyword">double</span> numB_;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>加法操作符类：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OperationAdd</span> :</span><span class="keyword">public</span> Operation</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">OperationAdd() &#123;&#125;</span><br><span class="line">~OperationAdd() &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_result</span><span class="params">()</span> <span class="keyword">const</span> <span class="keyword">override</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> get_numA() + get_numB();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>减法操作符类：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OperationSub</span> :</span><span class="keyword">public</span> Operation</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">OperationSub() &#123;&#125;</span><br><span class="line">~OperationSub() &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_result</span><span class="params">()</span> <span class="keyword">const</span> <span class="keyword">override</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> get_numA() - get_numB();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>乘法操作符类：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OperationMul</span> :</span><span class="keyword">public</span> Operation</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">OperationMul() &#123;&#125;</span><br><span class="line">~OperationMul() &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_result</span><span class="params">()</span> <span class="keyword">const</span> <span class="keyword">override</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> get_numA() * get_numB();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>除法操作符类：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OperationDiv</span> :</span><span class="keyword">public</span> Operation</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">OperationDiv() &#123;&#125;</span><br><span class="line">~OperationDiv() &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_result</span><span class="params">()</span> <span class="keyword">const</span> <span class="keyword">override</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (get_numB() == <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">throw</span> <span class="built_in">std</span>::logic_error(<span class="string">&quot;Error, divisor cannot be 0.&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> get_numA() / get_numB();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="简单工厂模式-1"><a href="#简单工厂模式-1" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><p>现在的问题是如何去实例化对象，考虑用一个单独的类来做这个创造实例的过程，将这个类称之为工厂。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OperationFactory</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function">Operation* <span class="title">CreatOperation</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>&amp; op)</span> <span class="keyword">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">switch</span> (op)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> OperationAdd;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> OperationSub;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;*&#x27;</span>:</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> OperationMul;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;/&#x27;</span>:</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> OperationDiv;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line"><span class="keyword">throw</span> <span class="built_in">std</span>::logic_error(<span class="string">&quot;Not find operation!&quot;</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>现在只需要输入运算符，工厂就会实例化出合适的对象，通过多态返回父类的方式实现了计算器的结果。</p>]]></content>
+    <content type="html"><![CDATA[<p>我们在写一个程序之前，就要考虑到程序的可维护性、可复用性、可扩展性，还有灵活性。面向对象的分析设计编程思想，可以通过封装、继承、多态把程序的耦合度降低，用设计模式使得程序更加灵活，容易修改，并且易于复用。<a id="more"></a></p><h1 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h1><p>想象一下这样的场景：客户要求用C++面向对象语言实现一个计算器控制台程序，要求输入两个数和运算符号，并且得到结果。</p><h2 id="业务的封装"><a href="#业务的封装" class="headerlink" title="业务的封装"></a>业务的封装</h2><p>首先考虑一个计算器，展示给用户看到的界面，只有数字和一些运算符，用户操作通常是不同数字和操作符的组合，将其称之为界面逻辑；在程序进行具体计算的过程中，分为多种情况考虑，实现运算的过程称之为业务逻辑。程序设计的原则之一是将业务逻辑与界面逻辑分开，让他们之间的耦合度降低。</p><h2 id="让程序松耦合"><a href="#让程序松耦合" class="headerlink" title="让程序松耦合"></a>让程序松耦合</h2><p>设计程序要尽量做到松耦合，在本案例中应该把加减乘除等运算分离，修改其中一个不会影响到其他的操作符，增加运算算法也不会影响其他代码。首先，是设计一个运算类，它有两个<code>Number</code>属性，主要用于计算前后数，然后有一个虚方法<code>get_result()</code>，用于获得结果。具体的加减乘除写出运算类的子类，然后继承它，重写<code>get_result()</code>方法，这样的话，如果修改任意一个算法，就不需要提供其他算法的代码。</p><p>运算类：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Operation</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">Operation() :numA_(<span class="number">0</span>), numB_(<span class="number">0</span>) &#123;&#125;</span><br><span class="line"><span class="keyword">virtual</span> ~Operation() &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_numA</span><span class="params">()</span><span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> numA_; &#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_numB</span><span class="params">()</span><span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> numB_; &#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">set_numA</span><span class="params">(<span class="keyword">double</span> a)</span> </span>&#123; numA_ = a; &#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">set_numB</span><span class="params">(<span class="keyword">double</span> b)</span> </span>&#123; numB_ = b; &#125;</span><br><span class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">double</span> <span class="title">get_result</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123; <span class="keyword">return</span> <span class="number">0</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="keyword">double</span> numA_;</span><br><span class="line"><span class="keyword">double</span> numB_;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>加法操作符类：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OperationAdd</span> :</span><span class="keyword">public</span> Operation</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">OperationAdd() &#123;&#125;</span><br><span class="line">~OperationAdd() &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_result</span><span class="params">()</span> <span class="keyword">const</span> <span class="keyword">override</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> get_numA() + get_numB();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>减法操作符类：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OperationSub</span> :</span><span class="keyword">public</span> Operation</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">OperationSub() &#123;&#125;</span><br><span class="line">~OperationSub() &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_result</span><span class="params">()</span> <span class="keyword">const</span> <span class="keyword">override</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> get_numA() - get_numB();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>乘法操作符类：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OperationMul</span> :</span><span class="keyword">public</span> Operation</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">OperationMul() &#123;&#125;</span><br><span class="line">~OperationMul() &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_result</span><span class="params">()</span> <span class="keyword">const</span> <span class="keyword">override</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> get_numA() * get_numB();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>除法操作符类：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OperationDiv</span> :</span><span class="keyword">public</span> Operation</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">OperationDiv() &#123;&#125;</span><br><span class="line">~OperationDiv() &#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">get_result</span><span class="params">()</span> <span class="keyword">const</span> <span class="keyword">override</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">if</span> (get_numB() == <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">throw</span> <span class="built_in">std</span>::logic_error(<span class="string">&quot;Error, divisor cannot be 0.&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> get_numA() / get_numB();</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="简单工厂模式-1"><a href="#简单工厂模式-1" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h2><p>现在的问题是如何去实例化对象，考虑用一个单独的类来做这个创造实例的过程，将这个类称之为工厂。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OperationFactory</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"><span class="function">Operation* <span class="title">CreatOperation</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span>&amp; op)</span> <span class="keyword">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">switch</span> (op)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> OperationAdd;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> OperationSub;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;*&#x27;</span>:</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> OperationMul;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&#x27;/&#x27;</span>:</span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> OperationDiv;</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line"><span class="keyword">throw</span> <span class="built_in">std</span>::logic_error(<span class="string">&quot;Not find operation!&quot;</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>现在只需要输入运算符，工厂就会实例化出合适的对象，通过多态返回父类的方式实现了计算器的结果。</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;我们在写一个程序之前，就要考虑到程序的可维护性、可复用性、可扩展性，还有灵活性。面向对象的分析设计编程思想，可以通过封装、继承、多态把程序的耦合度降低，用设计模式使得程序更加灵活，容易修改，并且易于复用。&lt;/p&gt;
-&lt;h1 id=&quot;简单工厂模式&quot;&gt;&lt;a href=&quot;#简单工厂</summary>
-      
+    <summary type="html">&lt;p&gt;我们在写一个程序之前，就要考虑到程序的可维护性、可复用性、可扩展性，还有灵活性。面向对象的分析设计编程思想，可以通过封装、继承、多态把程序的耦合度降低，用设计模式使得程序更加灵活，容易修改，并且易于复用。</summary>
     
     
     
