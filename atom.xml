@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>光の自传</title>
+  <title>Chi&#39;s Blog</title>
   
   
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-03-10T02:04:01.881Z</updated>
+  <updated>2021-04-29T13:41:19.205Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++中的std::function用法总结</title>
+    <link href="http://example.com/2021/04/28/cpp_std_function/"/>
+    <id>http://example.com/2021/04/28/cpp_std_function/</id>
+    <published>2021-04-27T16:00:00.000Z</published>
+    <updated>2021-04-29T13:41:19.205Z</updated>
+    
+    <content type="html"><![CDATA[<p>关于标准库中的<code>std::function</code>类模板，在<a href="https://en.cppreference.com/w/cpp/utility/functional/function">cppreference</a>官方给出的解释是：</p><blockquote><p>Class template <code>std::function</code> is a general-purpose polymorphic function wrapper. Instances of <code>std::function</code> can store, copy, and invoke any <code>CopyConstructible</code> <code>Callable</code> target – functions, lambda expressions, bind expressions, or other function objects, as well as pointers to member functions and pointers to data members.</p></blockquote><a id="more"></a><p>翻译成中文的意思是：</p><p>类模板<code>std::function</code>是一种通用的多态函数封装，<code>std::function</code>的实例可以对任何<code>CopyConstructible Callable</code><strong>目标</strong>进行存储、复制和调用操作，这些<strong>目标</strong>可以是普通函数、Lambda表达式、bind表达式，或者其它函数对象，和指向成员函数的指针和指向数据成员的指针。<code>std::function</code>对象可以看成是对C++中现有的可调用实体的一种类型安全的包裹（例如，函数指针这类可调用的实体，就是类型不安全的）。</p><p>比较通俗的理解就是，通过<code>std::function</code>对C++中各种可调用实体（普通函数、Lambda表达式、函数指针、以及其它函数对象等）的封装，可以形成一个新的可调用的<code>std::function</code>对象，让我们不需要再纠结那么多的可调用实体。</p><h2 id="对函数的封装"><a href="#对函数的封装" class="headerlink" title="对函数的封装"></a>对函数的封装</h2><p>我们现在有一个实现加法的函数</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">add</span><span class="params">(<span class="keyword">double</span> a, <span class="keyword">double</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我们可以将其封装为一个function类</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::function&lt;<span class="keyword">double</span>(<span class="keyword">double</span>, <span class="keyword">double</span>)&gt; f_add = add;</span><br></pre></td></tr></table></figure><p>现在就我们可以调用<code>f_add</code>实体对象</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> result = f_add(<span class="number">4</span>,<span class="number">5</span>); <span class="comment">// 结果将返回9</span></span><br></pre></td></tr></table></figure><h2 id="将函数作为参数"><a href="#将函数作为参数" class="headerlink" title="将函数作为参数"></a>将函数作为参数</h2><p>很多时候，我们希望能够将一个函数作为参数传入到另一个函数中进行调用，这个时候用<code>std::function</code>实现就很方便，例如实现一个计算器函数，它能接受两个参数和一个函数，在里面进行计算并返回计算的结果。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">calculator</span><span class="params">(<span class="keyword">double</span> a, <span class="keyword">double</span> b, <span class="built_in">std</span>::function&lt;<span class="keyword">double</span>(<span class="keyword">double</span>, <span class="keyword">double</span>)&gt; fn)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">return</span> fn(a, b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>我们将上面已经定义的<code>f_add</code>对象作为参数传入<code>calculator()</code>函数中，在内部进行调用</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> res = calculator(<span class="number">4</span>, <span class="number">5</span>, f_add);</span><br></pre></td></tr></table></figure><p>这样我们就实现了函数的回调。</p><h2 id="封装Lambda表达式"><a href="#封装Lambda表达式" class="headerlink" title="封装Lambda表达式"></a>封装Lambda表达式</h2><p>我们可以直接封装</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::function&lt;<span class="keyword">double</span>(<span class="keyword">double</span>, <span class="keyword">double</span>)&gt; f_add = []() &#123; add(<span class="number">42</span>, <span class="number">2</span>); &#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;关于标准库中的&lt;code&gt;std::function&lt;/code&gt;类模板，在&lt;a href=&quot;https://en.cppreference.com/w/cpp/utility/functional/function&quot;&gt;cppreference&lt;/a&gt;官方给出的解释是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Class template &lt;code&gt;std::function&lt;/code&gt; is a general-purpose polymorphic function wrapper. Instances of &lt;code&gt;std::function&lt;/code&gt; can store, copy, and invoke any &lt;code&gt;CopyConstructible&lt;/code&gt; &lt;code&gt;Callable&lt;/code&gt; target – functions, lambda expressions, bind expressions, or other function objects, as well as pointers to member functions and pointers to data members.&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="编程基础" scheme="http://example.com/categories/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="c++标准库" scheme="http://example.com/tags/c-%E6%A0%87%E5%87%86%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>常用设计模式（C++语言）</title>
