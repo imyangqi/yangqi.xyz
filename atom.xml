@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-05-20T05:57:40.916Z</updated>
+  <updated>2021-07-18T15:38:51.301Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微波网络中的S参数计算</title>
+    <link href="http://example.com/2021/07/18/210718_em_power_dB/"/>
+    <id>http://example.com/2021/07/18/210718_em_power_dB/</id>
+    <published>2021-07-17T16:00:00.000Z</published>
+    <updated>2021-07-18T15:38:51.301Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当我们在仿真天线或者一些微波器件的时候，S参数是很重要的参数之一，关于S参数的定义在很多微波工程中的书都能找到，但是对于具体如何计算，却很少有教科书会提及，这些概念大多散落在CEM领域的一些专业论文里面。本文旨在介绍几种常用激励端口下的S参数提取。<a id="more"></a></p><h2 id="关于分贝值-dB"><a href="#关于分贝值-dB" class="headerlink" title="关于分贝值(dB)"></a>关于分贝值(dB)</h2><p>通常我们在商业软件中计算出来的S参数都是用dB值来表示，这是由于在微波系统中两功率电平P1和P2之比经常用分贝(dB)来表示，即</p><div>$$10\log _{10}\frac{P_1}{P_2}\mathrm{dB}$$</div>不难发现用这种定义方法后，当功率之比为2时等效为3dB，功率比为0.1时等效为-10dB。这使得在计算元器件之前的功率损耗和增益中变得容易，因为相乘的损耗或增益因子可以通过对每一级用分贝表示的损耗或增益的相加来计算。例如，当一个信号经过一个6dB的衰减器和一个23dB的放大器之后，将具有23-6=17dB的总增益。<p>值得注意的是，在微波网络中分贝值只表示为功率比，但有时候也可以用电压来表示功率比，由于 \( P_1=V_{1}^{2}R_1\) 和\(P_2=V_{2}^{2}R_2\)，因此有</p><div>$$10\log _{10}\frac{V_{1}^{2}R_2}{V_{2}^{2}R_1}=20\log \frac{V_1}{V_2}\sqrt{\frac{R_2}{R_1}}\mathrm{dB}$$</div><p>其中，\(R_1\)和\(R_2\)为负载电阻，\(V_1\)和\(V_2\)为负载电压，如果负载电阻相等，那么公式可以简化为</p><div>$$20\log \frac{V_1}{V_2}\mathrm{dB}$$</div><h2 id="LumpedPort激励下的S参数计算"><a href="#LumpedPort激励下的S参数计算" class="headerlink" title="LumpedPort激励下的S参数计算"></a>LumpedPort激励下的S参数计算</h2><p>在集总端口激励下，通常我们会在施加端口激励的两端定义一个带内阻的电压源，称之为Thévenin等效源，在这种情况S参数提取可以根据电压之比来提取：</p><h2 id="Waveport激励下的S参数计算"><a href="#Waveport激励下的S参数计算" class="headerlink" title="Waveport激励下的S参数计算"></a>Waveport激励下的S参数计算</h2>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;当我们在仿真天线或者一些微波器件的时候，S参数是很重要的参数之一，关于S参数的定义在很多微波工程中的书都能找到，但是对于具体如何计算，却很少有教科书会提及，这些概念大多散落在CEM领域的一些专业论文里面。本文旨在介绍几种常用激励端口下的S参数提取。</summary>
+    
+    
+    
+    <category term="电磁场理论" scheme="http://example.com/categories/%E7%94%B5%E7%A3%81%E5%9C%BA%E7%90%86%E8%AE%BA/"/>
+    
+    
+    <category term="S参数" scheme="http://example.com/tags/S%E5%8F%82%E6%95%B0/"/>
+    
+    <category term="分贝dB" scheme="http://example.com/tags/%E5%88%86%E8%B4%9DdB/"/>
+    
+  </entry>
   
   <entry>
     <title>光生写给结夏的信</title>
