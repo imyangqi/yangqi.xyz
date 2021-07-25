@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-24T01:46:49.950Z</updated>
+  <updated>2021-07-25T15:16:41.681Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>连续/离散周期信号的傅里叶变换</title>
+    <link href="http://example.com/2021/07/25/210725_DTFT_and_FFT/"/>
+    <id>http://example.com/2021/07/25/210725_DTFT_and_FFT/</id>
+    <published>2021-07-24T16:00:00.000Z</published>
+    <updated>2021-07-25T15:16:41.681Z</updated>
+    
+    <content type="html"><![CDATA[<p>在信号处理中，傅里叶变换是必不可缺的一部分，而傅里叶变换又分为连续和非连续信号的傅里叶变换，现就这一系列的知识作一个总结和归纳。<a id="more"></a></p><h2 id="连续时间周期信号的傅里叶级数表示"><a href="#连续时间周期信号的傅里叶级数表示" class="headerlink" title="连续时间周期信号的傅里叶级数表示"></a>连续时间周期信号的傅里叶级数表示</h2><h3 id="成谐波关系的复指数信号集"><a href="#成谐波关系的复指数信号集" class="headerlink" title="成谐波关系的复指数信号集"></a>成谐波关系的复指数信号集</h3><p>如果一个信号是周期的，那么对于所有的\(t\)，存在某个正值的\(T\)，有：</p><div>$$x\left( t \right) =x\left( t+T \right) $$</div><p>\(x\left(t\right)\)的基波周期就是满足上式的最小非零正值\(T\)，\(\omega _0=2\pi /T\)称为基波频率。例如周期复指数信号</p><div>$$x\left( t \right) =e^{j\omega _0t}$$</div><p>与其有关的<strong>成谐波关系的复指数信号集</strong>就是</p><div>$$\phi _k\left( t \right) =e^{jk\omega _0t}=e^{jk\left( 2\pi /T \right) t}, k=0,\pm 1,\pm 2,...$$</div><p>这些信号中的每一个都有一个基波频率，是\(\omega_0\)的倍数，因此每一个信号对于周期\(T\)来说都是周期的。于是，一个由成谐波关系的复指数线性组合形成的信号</p><div>$$x\left( t \right) =\sum_{k=-\infty}^{+\infty}{a_ke^{jk\omega _0t}}=\sum_{k=-\infty}^{+\infty}{a_ke^{jk\left( 2\pi /T \right) t}}$$</div><p>对\(T\)来说也是周期的，上式中，\(k=0\)这一项是常数，\(k=+1\)和\(k=-1\)这两项都有基波频率等于\(\omega_0\)，两者结合在一起称之为基波分量，或者一次谐波分量。\(k=+2\)和\(k=-2\)这两项也是周期的，周期为基波分量周期的1/2，称之为二次谐波分量，依此类推。一个周期信号表示成上式，就称之为该式的<strong>傅里叶级数表示</strong>。</p><h3 id="傅里叶级数表示的确定"><a href="#傅里叶级数表示的确定" class="headerlink" title="傅里叶级数表示的确定"></a>傅里叶级数表示的确定</h3><p>现在假设一个给定的周期信号能表示成傅里叶级数的形式，那就需要一种方法来确定这些系数\(a_k\)。推导过程很简单，将上面的式子两边各乘以\(e^{-jn\omega _0t}\)并在\(0\)到\(T=2\pi /\omega _0\)上对\(t\)积分即可，有：</p><div>$$\int_0^T{x\left( t \right) e^{-jn\omega _0t}dt}=\int_0^T{\sum_{k=-\infty}^{+\infty}{a_ke^{jk\omega _0t}e^{-jn\omega _0t}}dt}\\=\sum_{k=-\infty}^{+\infty}{a_k\left[ \int_0^T{e^{j\left( k-n \right) \omega _0t}dt} \right]}$$</div>上式右边括号的积分结果利用欧拉关系很容易得到<div>$$\int_0^T{e^{j\left( k-n \right) \omega _0t}dt}=\begin{cases}    T, k=n\\    0, k\ne n\\\end{cases}$$</div><p>因此，右边的式子就简化为\(Ta_n\)，所以</p><div>$$a_n=\frac{1}{T}\int_0^T{x\left( t \right) e^{-jn\omega _0t}dt}$$</div><p>至此，周期函数的傅里叶级数展开的系数就确定了。另外，由于积分是在\(T\)的时间间隔内进行的，而\(T\)又是\(\cos \left( k-n \right) \omega _0t\)和\(\sin \left( k-n \right) \omega _0t\)周期的整数倍，所以在任意\(T\)的间隔做积分，结果都是相同的。</p><p>上述过程可以归纳如下：如果\(x\left( t \right)\)有一个傅里叶级数表示式，那么傅里叶级数中的系数可以确定为</p><div>$$x\left( t \right) =\sum_{k=-\infty}^{+\infty}{a_ke^{jk\omega _0t}}=\sum_{k=-\infty}^{+\infty}{a_ke^{jk\left( 2\pi /T \right) t}}\\a_k=\frac{1}{T}\int_T{x\left( t \right) e^{-jk\omega _0t}dt}=\frac{1}{T}\int_T{x\left( t \right) e^{-jk\left( 2\pi /T \right) t}dt}$$</div><h2 id="离散时间周期信号的傅里叶级数表示"><a href="#离散时间周期信号的傅里叶级数表示" class="headerlink" title="离散时间周期信号的傅里叶级数表示"></a>离散时间周期信号的傅里叶级数表示</h2><h3 id="成谐波关系的复指数信号集-1"><a href="#成谐波关系的复指数信号集-1" class="headerlink" title="成谐波关系的复指数信号集"></a>成谐波关系的复指数信号集</h3><p>对于一个离散信号\(x[n]\)，若有</p><div>$$x\left[ n \right] =x\left[ n+N \right] $$</div><p>就是一个周期为\(N\)的周期信号。基波周期就是\(N\)，基波频率为\(\omega _0=2\pi /N\)。例如，复指数\(e^{jk\left( 2\pi /N \right) n}\)就是周期的，再者，有下式给出的</p><div>$$\phi _k\left[ n \right] =e^{jk\omega _0n}=e^{jk\left( 2\pi /N \right) n},k=0,\pm 1,\pm 2,...$$</div><p>所有离散时间复指数信号集合都是周期的，且周期为\(N\)。\(\phi _k\left[ n \right]\)中的全部信号，其基波频率都是\(2\pi /N\)的整数倍，因此它们之间互为谐波关系。由于上式中的信号集只有\(N\)个信号是不相同的，因此不难得出</p><div>$$\phi _k\left[ n \right] =\phi _{k+rN}\left[ n \right] $$</div><p>现在我们希望利用序列\(\phi _k\left[ n \right]\)的线性组合来表示更为一般的周期序列，即</p><div>$$x\left[ n \right] =\sum_k{a_k\phi _k\left[ n \right]}=\sum_k{a_ke^{jk\omega _0n}}=\sum_k{a_ke^{jk\left( 2\pi /N \right) n}}$$</div><p>因为序列\(\phi _k\left[ n \right]\)只在\(k\)的\(N\)个相继值的区间上是不同的，因此上式求和仅仅需要包含\(N\)项即可，于是上式的求和可以写成</p><div>$$x\left[ n \right] =\sum_{k=\left< N \right>}{a_k\phi _k\left[ n \right]}=\sum_{k=\left< N \right>}{a_ke^{jk\omega _0n}}=\sum_{k=\left< N \right>}{a_ke^{jk\left( 2\pi /N \right) n}}$$</div><p>上式称之为<strong>离散时间傅里叶级数</strong>，而系数\(a_k\)称之为<strong>傅里叶级数系</strong>数。</p><h3 id="傅里叶级数表示的确定-1"><a href="#傅里叶级数表示的确定-1" class="headerlink" title="傅里叶级数表示的确定"></a>傅里叶级数表示的确定</h3><p>推导过程省去，直接给出离散时间傅里叶级数对，为</p><div>$$x\left[ n \right] =\sum_{k=\left< N \right>}{a_ke^{jk\omega _0n}}=\sum_{k=\left< N \right>}{a_ke^{jk\left( 2\pi /N \right) n}}\\a_k=\frac{1}{N}\sum_{n=\left< N \right>}{x\left[ n \right] e^{-jk\omega _0n}}=\frac{1}{N}\sum_{n=\left< N \right>}{x\left[ n \right] e^{-jk\left( 2\pi /N \right) n}}$$</div><p>上面的两个表明了，如果一个离散的周期信号展开为傅里叶级数的求法，第一个公式称之为<strong>综合公式</strong>，第二个称之为<strong>分析公式</strong>。和连续时间信号情况一样，离散时间傅里叶级数系数\(a_k\)也往往称之为\(x\left[ n \right] \)的<strong>频谱系数</strong>。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;在信号处理中，傅里叶变换是必不可缺的一部分，而傅里叶变换又分为连续和非连续信号的傅里叶变换，现就这一系列的知识作一个总结和归纳。</summary>
+    
+    
+    
+    <category term="信号处理" scheme="http://example.com/categories/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="傅里叶变换" scheme="http://example.com/tags/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>微波网络中的分贝值</title>
