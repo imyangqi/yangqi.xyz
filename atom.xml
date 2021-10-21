@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-09T04:01:54.499Z</updated>
+  <updated>2021-10-08T14:25:36.618Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,33 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2021/10/09/211009_large_matrix/"/>
-    <id>http://example.com/2021/10/09/211009_large_matrix/</id>
-    <published>2021-10-09T03:53:59.519Z</published>
-    <updated>2021-10-09T04:01:54.499Z</updated>
-    
-    <content type="html"><![CDATA[<p>矩阵求解技术入门</p><p>对于线性方程组</p><p>Ax=b</p><p>A为已知的N*N矩阵，b为已知向量，x为待求向量。</p><p>相关术语：</p><ol><li><p>矩阵条件数</p><p> 条件数是一个表征矩阵稳定特性的标志，条件数越大，说明矩阵越不稳定，即当矩阵中数据出现微小变化时，x结果变化非常大。Matlab中可直接使用命令cond(A)查看矩阵条件数。 </p></li><li><p>满秩矩阵</p><p>用初等行变换将矩阵A化为阶梯形矩阵, 矩阵中非零行的个数就定义为这个矩阵的秩，记做r(A)。</p><p>即如果矩阵A为N*N，r(A)=N，则矩阵A为满秩矩阵。</p><p>在边界元，矩量法等计算方法中，最终形成的A为满秩矩阵。</p></li><li><p>稀疏矩阵</p></li><li><p>对称矩阵</p></li><li><p>求解线性方程组直接法</p></li><li><p>求解线性方程组迭代法</p></li><li><p>OOC(out of core)</p></li><li></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;矩阵求解技术入门&lt;/p&gt;
-&lt;p&gt;对于线性方程组&lt;/p&gt;
-&lt;p&gt;Ax=b&lt;/p&gt;
-&lt;p&gt;A为已知的N*N矩阵，b为已知向量，x为待求向量。&lt;/p&gt;
-&lt;p&gt;相关术语：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;矩阵条件数&lt;/p&gt;
-&lt;p&gt; 条件数是一个表征矩阵稳定特性的标志，条件数越大，说</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>四面体上的高斯积分</title>
