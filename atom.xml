@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>时间之矢</title>
+  <title>航行备忘录</title>
   
   
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-08T14:25:36.618Z</updated>
+  <updated>2021-11-03T13:54:57.502Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>猎户座LL星的弓形激波</title>
+    <link href="http://example.com/2021/11/03/211103_LL_Oriniors/"/>
+    <id>http://example.com/2021/11/03/211103_LL_Oriniors/</id>
+    <published>2021-11-02T16:00:00.000Z</published>
+    <updated>2021-11-03T13:54:57.502Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在NASA官网有一个<a href="https://www.nasa.gov/content/goddard/what-did-hubble-see-on-your-birthday/">入口</a>，可以查看在你生日的那一天，哈勃望远镜在太空中看到了什么，网站支持输入月份和日数，所查询出来的结果是某一年份下你生日那天哈勃在太空所看到的景象，可以把它当成是给自己的一份生日礼物，觉得这是件非常浪漫的事。我输入了自己的生日2月3日（阳历），看到刚好在我出生的那一天，哈勃在太空中看到了猎户座LL星的弓形激波。<a id="more"></a></p><h2 id="猎户座LL星的弓形激波"><a href="#猎户座LL星的弓形激波" class="headerlink" title="猎户座LL星的弓形激波"></a>猎户座LL星的弓形激波</h2><center class="half"><img src="/images/covers/LLOri_hubble_1074.jpg" alt="猎户座LL星的弓形激波"  width="800"/></center><p>这道优雅庞大的弧状结构，实际上是个宽度约半光年的弓形激波，因年轻猎户座LL星的恒星风冲撞猎户座星云的云气流而形成的。漂流在猎户座恒星育婴室内的猎户座LL星，是一颗还处在诞生阶段的变星，它发出比我们中年太阳还要强烈的恒星风。当高速的恒星风冲击慢速移动的云气时，就会产生一道激波前缘，酷似船滑过水面的船首波或以超音速飞行的飞机所造成之弓形波。此区域慢速云气流的推手，是猎户座星云中心、位在此影像右下缘外头的炽热四合星群。如果在三维空间去看猎户座LL星的反折激波，形状会像是一个碗，而从底部往上看时最为明亮。猎户座的众多恒星诞生区里，有各式各样与恒星形成相关的流形，包括影像右上角一颗暗星周围的弓形激波。上面这幅由哈伯太空望远镜摄于1995年的彩色组合影像，是猎户座大星云马赛克影像的一部份。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在NASA官网有一个&lt;a href=&quot;https://www.nasa.gov/content/goddard/what-did-hubble-see-on-your-birthday/&quot;&gt;入口&lt;/a&gt;，可以查看在你生日的那一天，哈勃望远镜在太空中看到了什么，网站支持输入月份和日数，所查询出来的结果是某一年份下你生日那天哈勃在太空所看到的景象，可以把它当成是给自己的一份生日礼物，觉得这是件非常浪漫的事。我输入了自己的生日2月3日（阳历），看到刚好在我出生的那一天，哈勃在太空中看到了猎户座LL星的弓形激波。</summary>
+    
+    
+    
+    <category term="天文" scheme="http://example.com/categories/%E5%A4%A9%E6%96%87/"/>
+    
+    
+    <category term="猎户座" scheme="http://example.com/tags/%E7%8C%8E%E6%88%B7%E5%BA%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>四面体上的高斯积分</title>
