@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>航行备忘录</title>
+  <title>小羊的备忘录</title>
   
   
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-03T13:54:57.502Z</updated>
+  <updated>2021-12-18T08:23:41.643Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>雷达散射截面的相关概念</title>
+    <link href="http://example.com/2021/12/18/211218_radar_rcs/"/>
+    <id>http://example.com/2021/12/18/211218_radar_rcs/</id>
+    <published>2021-12-17T16:00:00.000Z</published>
+    <updated>2021-12-18T08:23:41.643Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在电磁场散射问题的仿真中，经常需要计算的一个参数是雷达散射截面（Radar cross-section, RCS），在此记录一些相关的术语和解释。<a id="more"></a></p><h2 id="Radar-cross-section"><a href="#Radar-cross-section" class="headerlink" title="Radar cross-section"></a>Radar cross-section</h2><p>How does a radar system create polarized waves? It uses an antenna that is designed to transmit and receive EM waves of a specific polarization. Antennas come in many forms, including horns, waveguides, dipoles and patches. In each case, the electric and mechanical properties of the antenna are such that the transmitted wave is almost purely polarized with a specific design polarization. In a simple radar system, the same antenna is often configured so that it is matched to the same polarization on reception (when an EM wave is incident upon it) </p><p>Signals with components in two orthogonal or basis polarizations are needed to create a wave with an arbitrary polarization. The two most common basis polarizations are horizontal linear or H, and vertical linear or V. Circular polarizations are also in use for some applications, e.g. weather radars. Their basis components are denoted by R for Right Hand Circular and L for Left Hand Circular. </p><p>In more complex radar systems, the antenna may be designed to transmit and receive waves at more than one polarization. On transmit, waves of different polarizations can be transmitted separately, using a switch to direct energy to the different parts of the antenna in sequence (e.g. the H and V parts). In some cases the two parts can be used together, for example, a circular polarized signal can be transmitted by feeding the H and V parts of the antenna simultaneously, with signals of equal strength and a 90° phase difference (recall Figure 1-3). </p><p>Because the scatterer can change the polarization of the scattered wave to be different from the polarization of the incident wave, the radar antenna is often designed to receive the different polarization components of the EM wave simultaneously. For example, the H and V parts of an antenna can receive the two orthogonal components of the incoming wave, and the system electronics keep these two signals separate. </p><p>Denoting the transmit and receive polarizations by a pair of symbols, a radar system using H and V linear polarizations can thus have the following channels: </p><ul><li>HH - for horizontal transmit and horizontal receive,(<strong>HH</strong>)</li><li>VV - for vertical transmit and vertical receive,(<strong>VV</strong>)</li><li>HV - for horizontal transmit and vertical receive(<strong>HV</strong>), and</li><li>VH - for vertical transmit and horizontal receive(<strong>VH</strong>).</li></ul><p>The first two of these polarization combinations are referred to as like-polarized, because the transmit and receive polarizations are the same. The last two combinations are referred to as cross-polarized because the transmit and receive polarizations are orthogonal to one another.</p><p>A radar system can have different levels of polarization complexity:</p><ul><li>single polarized - HH or VV or HV or VH</li><li>dual polarized - HH and HV, VV and VH, or HH and VV</li><li>four polarizations - HH, VV, HV, and VH</li></ul><p>A quadrature polarized (i.e. polarimetric) radar uses these four polarizations, and measures the phase difference between the channels as well as the magnitudes. Some dual polarized radars also measure the phase difference between channels, as this phase plays an important role in polarimetric information extraction. </p><p>This article is reproduced from <a href="https://www.nrcan.gc.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/satellite-imagery-products/educational-resources/tutorial-radar-polarimetry/polarization-radar-systems/9567">here</a>.</p>]]></content>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;在电磁场散射问题的仿真中，经常需要计算的一个参数是雷达散射截面（Radar cross-section, RCS），在此记录一些相关的术语和解释。</summary>
+    
+    
+    
+    <category term="电磁场理论" scheme="http://example.com/categories/%E7%94%B5%E7%A3%81%E5%9C%BA%E7%90%86%E8%AE%BA/"/>
+    
+    
+    <category term="RCS" scheme="http://example.com/tags/RCS/"/>
+    
+  </entry>
   
   <entry>
     <title>猎户座LL星的弓形激波</title>
