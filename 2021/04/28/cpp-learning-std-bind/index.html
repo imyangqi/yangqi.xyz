@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="五一假期抽空把歌德的《少年维特的烦恼》读完了，最开始想读这本书还是因为青峰写给杨丞琳的一首同名歌，很喜欢青峰写的词，所以想要更深入地了解这首歌的含义。">
+<meta name="description" content="std::bind包含在标准库头文件#include&lt;functional&gt;中，它是一种函数适配器，接收一个可调用对象，生成一个新的可调用对象来适配原对象的参数列表。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《少年维特的烦恼》读书笔记">
-<meta property="og:url" content="http://example.com/2021/05/05/the-sorrows-of-young-werther-note/index.html">
+<meta property="og:title" content="C++中的std::bind用法总结">
+<meta property="og:url" content="http://example.com/2021/04/28/cpp-learning-std-bind/index.html">
 <meta property="og:site_name" content="融雪之前">
-<meta property="og:description" content="五一假期抽空把歌德的《少年维特的烦恼》读完了，最开始想读这本书还是因为青峰写给杨丞琳的一首同名歌，很喜欢青峰写的词，所以想要更深入地了解这首歌的含义。">
+<meta property="og:description" content="std::bind包含在标准库头文件#include&lt;functional&gt;中，它是一种函数适配器，接收一个可调用对象，生成一个新的可调用对象来适配原对象的参数列表。">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/images/covers/wether.jpg">
-<meta property="article:published_time" content="2021-05-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-03-27T06:21:16.591Z">
+<meta property="article:published_time" content="2021-04-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-27T09:13:45.214Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/covers/wether.jpg">
 
 
 
@@ -121,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://example.com/2021/05/05/the-sorrows-of-young-werther-note/"/>
+  <link rel="canonical" href="http://example.com/2021/04/28/cpp-learning-std-bind/"/>
 
 
 
 
 
-  <title>《少年维特的烦恼》读书笔记 | 融雪之前</title>
+  <title>C++中的std::bind用法总结 | 融雪之前</title>
   
 
 
@@ -254,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/05/the-sorrows-of-young-werther-note/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/28/cpp-learning-std-bind/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -271,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《少年维特的烦恼》读书笔记</h1>
+          <h1 class="post-title" itemprop="name headline">C++中的std::bind用法总结</h1>
         
 
         <div class="post-meta">
@@ -283,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-05-05T00:00:00+08:00">
-                2021-05-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-04-28T00:00:00+08:00">
+                2021-04-28
               </time>
             
 
@@ -306,8 +304,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
+                  <a href="/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index">
+                    <span itemprop="name">编程技巧</span>
                   </a>
                 </span>
 
@@ -343,35 +341,20 @@
       
 
       
-        <p>五一假期抽空把歌德的《少年维特的烦恼》读完了，最开始想读这本书还是因为青峰写给杨丞琳的一首同名歌，很喜欢青峰写的词，所以想要更深入地了解这首歌的含义。<span id="more"></span></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=316000&auto=0&height=66"></iframe>
-
-<p>故事中维特为了逃避世事的纷扰，只身来到瓦尔海姆。在一次去乡村舞会的路上，他结识了天使般美丽纯洁的少女夏绿蒂，并对她一见倾心，陷入爱河。这时的绿蒂已经和一个名叫阿尔伯特的人订了婚，阿尔伯特为人正直、诚实、可靠，就连绿蒂也认为：阿尔伯特的“稳重可靠仿佛天生可以作为一种基础，好让一个贤淑的女子在上面建立幸福的生活”。面对看起来如此般配的一对人，维特对绿蒂的爱情烈火并没有就此熄灭，而是越来越旺，维特几乎不能自己。一面是自己深爱的女子，一面是对自己友善的阿尔伯特——她的未婚夫，在三个人的爱情角逐中，维特经过矛盾和痛苦挣扎后不得不忍痛退出，去了一家很远的公使馆担任书记官，然而这里的生活并不如意，他常常郁郁寡欢，彷徨苦闷。最后他又回到了绿蒂身边，这时的绿蒂已经和阿尔伯特结婚，婚后的生活并不愉快。失去维特后，绿蒂的内心空虚寂寥，和维特的久别重逢，使他们再一次陷入爱情的深潭，不可自拔。维特对绿蒂的爱之深切与不能得到绿蒂的矛盾，又使他陷入绝望的境地，极度痛苦的维特最后举枪自杀。</p>
-<center class="half">
-<img src="/images/covers/wether.jpg" alt="少年维特的烦恼电视剧截图"  width="600"/>
-</center>
-<center><font size="2">少年维特的烦恼电视剧截图</font></center>
-
-<p>对于维特最后的选择令我感到心痛，但又理解他的选择。美剧《无耻之徒》里面有一句台词：</p>
-<blockquote>
-<p>Love is not supposed to be cute, love is raw and destructive.<br>爱从来都不是什么可爱的东西，爱是生猛而具有毁灭性的。</p>
-</blockquote>
-<p>维特曾是那么地热爱着自然：</p>
-<blockquote>
-<p>每当我周围的可爱峡谷霞气蒸腾，杲杲的太阳悬挂在林梢，将它的光芒这儿那儿地偷射进幽暗密林的圣地中来时，我便躺卧在飞泉侧畔的茂草里，紧贴地面观察那千百种小草，感觉到叶茎间有个扰攘的小小世界——这数不尽也说不清的形形色色的小虫子、小蛾子——离我的心更近了，于是我感受到按自身模样创造我们的全能的上帝存在，感受到将我们托付于永痕欢乐海洋之中的博爱天父的嘘息。——五月十日</p>
-</blockquote>
-<p>和那么地喜欢着孩子们：</p>
-<blockquote>
-<p>是的，威廉，在这个世界上离我的心最近的是孩子们。每当我从旁边观察他们，从细小的事情中发现他们有朝一日所需要的种种品德与才能的萌芽，从他们今日的固执任性中看出将来的坚毅与刚强，从今日的顽皮放肆中看出将来的幽默乐观以及轻松愉快地应付人世危难的本领，每当我发现这一切还丝毫未经败坏，完整无损，我便一次一次地，反反复复地，吟味人类的导师[1]这句金言。——六月二十九日</p>
-<p>注释：[1]指耶稣。事见《圣经·新约·马太福音》第十八章：耶稣对门徒说：”你们若不回转，变成小孩子的样子，断不得进天国。“</p>
-</blockquote>
-<p>每当我在书中读到维特在自然界中感受到美妙之处，以及和孩子们相处时的快乐，便会联想到自己也是那么地喜欢着大自然和孩子们，很多次走在家乡的田野里，小河边，独自寻觅着路边的野花，静静地聆听潺潺的水流声，和孩子们一起分享食物，教他们使用电脑，给他们布置玩耍的场地，从他们的热情和善良中感受到这个世界的可爱。</p>
-<p>歌德完成这部作品前后只花了四周的时间，之所以能如此高效是因为这部作品中的大部分内容都来自歌德自身的经历。1772年5月，歌德遵循父命到威茨拉尔的帝国高等法院实习。威茨拉尔是座空气陈腐得令人窒息的小城，帝国法院更以办事拖沓而恶名远播。歌德因此把实习的事情抛到脑后，终日悠游于景色宜人的乡间，在那儿研读荷马、品达等人的作品，做他感兴趣的事情。6月9日，在一次乡村舞会上，他结识了天真美丽的少女夏绿蒂·布甫，对她产生了热烈的爱慕。但夏绿蒂已经订婚。尽管她的未婚夫科斯特纳和夏绿蒂一家对歌德都十分友善，但他仍因失恋而感到痛苦，终于在9月11日不辞而别，回到法兰克福。</p>
-<p>回到故乡以后，歌德久久未能克服心头的苦闷，以致产生了自杀的念头。谁料差不多就在这个时候，另一个人却把他几经尝试而放弃的事情完成了，一个他认识的叫耶鲁撒冷的青年自杀了。出事地点也正好在威茨拉尔，歌德在散步时还常常与他相遇。而且自杀的主要原因也同为恋慕他人之妻遭到拒斥。这种种情况，不能不令歌德联想到自身的遭遇，对同病相怜的耶鲁撒冷的不幸感到切肤之痛。</p>
-<p>再后来，1774年初，女作家索菲的女儿玛克西米莲娜嫁给了一个名叫勃伦塔诺的富商，移居到了法兰克福。前年，歌德从威茨拉尔返回故乡时，曾顺便访问她家，对她颇有好感。如今重逢，两人都甚为欣喜。可惜这幸福很快变成了新的痛苦源泉，勃伦塔诺比玛克西米莲娜大二十岁，已经时有五个孩子的鳏夫，除去做生意赚钱别无所长，性情急躁而好嫉妒，很快对两个年轻人的交往产生疑忌，以致和歌德产生激烈冲突。这新的痛苦狠狠触动了歌德心灵中旧有的创伤，使他感到更加痛苦。为了彻底医治好自己的伤痛，歌德便愤而提笔，开始了维特的写作。</p>
-<p>年轻的歌德完全进入了创作的狂热和忘我地境地，就像个梦游者似的，在几乎是无意识的状态下写成了这本小册子，以致当他最后拿起手稿来进行修改润饰时，自己也感到十分惊讶。维特一书之所以能如此情真意切，感人肺腑，这都是因为歌德的亲身感受。</p>
-<p>在信息发达的现代社会，经常能看见新闻有人因为各种原因而结束自己的生命，有时候很难去体会当事者要经历多大的痛苦，才会选择直面死亡，以死亡来结束掉这一切。我知道，这种决定并不是一瞬间完成的，而是从出生到当下的一种经历的积分式结果。我不想也没有权力去指责他人的决定，但我仍会感到惋惜，或许只要再等一等，就能体会到这个世界的一点点美好之处，而放弃结束生命的念头。</p>
-<p>生命的意义是什么？我时常思考这个问题，但每个阶段得到的答案都不尽相同。现在的我觉得生命的意义在于爱，这种爱是对世间万物的爱，对他人的爱。一个人如果只考虑自身的利益，会很容易让自己陷入到一种狭隘的境地，无法去体会世界的美好和可爱之处。我们应该去爱人，去帮助他人，在爱人的过程中感受到被爱，从而建立人与人之间的羁绊。维系着我们生活下去的，正是这一份一份的羁绊。</p>
+        <p><code>std::bind</code>包含在标准库头文件<code>#include&lt;functional&gt;</code>中，它是一种函数适配器，接收一个可调用对象，生成一个新的可调用对象来适配原对象的参数列表。<span id="more"></span></p>
+<h2 id="使用格式"><a href="#使用格式" class="headerlink" title="使用格式"></a>使用格式</h2><p> <code>std::bind</code>使用的一般形式： </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> new_fun = <span class="built_in">bind</span>(fun, arg_list);</span><br></pre></td></tr></table></figure>
+<p> 其中<code>fun</code>是一个函数，<code>arg_list</code>是用逗号隔开的参数列表。调用<code>new_fun()</code>相当于调用<code>fun(arg_list)</code>。 </p>
+<h2 id="常见用法"><a href="#常见用法" class="headerlink" title="常见用法"></a>常见用法</h2><h3 id="用法一：改变参数的个数"><a href="#用法一：改变参数的个数" class="headerlink" title="用法一：改变参数的个数"></a>用法一：改变参数的个数</h3><p>头文件：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span>  </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;functional&gt;</span>  </span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;  </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std::placeholders; </span><br></pre></td></tr></table></figure>
+<p>现在定义一个函数，接收一个数组<code>array</code>，数组长度<code>n</code>和某个数<code>num</code>，它将实现打印数组中大于<code>num</code>的功能</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> fun = [](<span class="type">int</span> *array, <span class="type">int</span> n, <span class="type">int</span> num)&#123;  </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">if</span> (array[i] &gt; num)  </span><br><span class="line">        cout &lt;&lt; array[i] &lt;&lt; ends;  </span><br><span class="line">    &#125;  </span><br><span class="line">    cout &lt;&lt; endl;  </span><br><span class="line">&#125;;  </span><br></pre></td></tr></table></figure>
+<p>利用<code>std::bind</code>函数将原来函数调用所需要的参数固定为2个，实现过程如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> array[] = &#123; <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span> &#125;;  </span><br><span class="line"><span class="keyword">auto</span> new_fun = <span class="built_in">bind</span>(fun, _1, _2, <span class="number">5</span>); <span class="comment">//_1，_2是占位符，固定num=5 </span></span><br><span class="line"><span class="built_in">new_fun</span>(array, <span class="built_in">sizeof</span>(array) / <span class="built_in">sizeof</span>(*array)); <span class="comment">// 调用只需要2个参数了</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中_1，_2是占位符，定义于命名空间<code>placeholders</code>中，_1是n<code>new_fun</code>的第一个参数，_2是<code>new_fun</code>的第二个参数，以此类推。在本例中，<code>fun()</code>的调用需要传递三个参数，而用<code>bind()</code>进行绑定后只需两个参数了，因为第三个参数在绑定时被固定了下来。减少函数参数的调用，这是<code>bind</code>最常见的用法。</p>
+<h3 id="用法二：更改参数的顺序"><a href="#用法二：更改参数的顺序" class="headerlink" title="用法二：更改参数的顺序"></a>用法二：更改参数的顺序</h3><p> <code>bind</code>的另一个常见的用法是更改参数的调用顺序，如 </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">fun</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span></span>;</span><br><span class="line"><span class="keyword">auto</span> new_fun = <span class="built_in">bind</span>(fun, _2, _1);</span><br></pre></td></tr></table></figure>
+<p> 此时，调用<code>new_fun(1, 2)</code>相当于调用<code>fun(2, 1)</code>。 </p>
 
       
     </div>
@@ -396,8 +379,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2021/04/28/cpp-learning-std-bind/" rel="next" title="C++中的std::bind用法总结">
-                <i class="fa fa-chevron-left"></i> C++中的std::bind用法总结
+              <a href="/2021/04/28/cpp-learning-std-function/" rel="next" title="C++中的std::function用法总结">
+                <i class="fa fa-chevron-left"></i> C++中的std::function用法总结
               </a>
             
           </div>
@@ -406,8 +389,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2021/10/08/triangle-gauss-integral/" rel="prev" title="四面体上的高斯面积分方法（附C++代码）">
-                四面体上的高斯面积分方法（附C++代码） <i class="fa fa-chevron-right"></i>
+              <a href="/2021/05/05/the-sorrows-of-young-werther-note/" rel="prev" title="《少年维特的烦恼》读书笔记">
+                《少年维特的烦恼》读书笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -460,8 +443,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -512,6 +504,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%A0%BC%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">使用格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%94%A8%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">常见用法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%B3%95%E4%B8%80%EF%BC%9A%E6%94%B9%E5%8F%98%E5%8F%82%E6%95%B0%E7%9A%84%E4%B8%AA%E6%95%B0"><span class="nav-number">2.1.</span> <span class="nav-text">用法一：改变参数的个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E6%B3%95%E4%BA%8C%EF%BC%9A%E6%9B%B4%E6%94%B9%E5%8F%82%E6%95%B0%E7%9A%84%E9%A1%BA%E5%BA%8F"><span class="nav-number">2.2.</span> <span class="nav-text">用法二：更改参数的顺序</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
