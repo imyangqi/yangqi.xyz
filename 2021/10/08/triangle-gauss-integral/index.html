@@ -81,7 +81,7 @@
 
 <meta name="description" content="在有限元数值计算中，经常需要在四面体上进行面积分或体积分，积分方法通常选用的是高斯积分，在参考单元内定义一系列高斯积分点和与之对应的高斯积分权值。高斯积分策略分为两种，一种是将参考单元的积分点映射到实际单元中进行积分，另一种将实际单元上的积分映射到参考单元中进行计算，后者更为常用一些。本文主要描述了对于两个相邻四面体的交界面，当交界面左右两端定义的函数不相同时，两函数相乘在同一个面上的面积分计算方">
 <meta property="og:type" content="article">
-<meta property="og:title" content="四面体上的高斯面积分方法（附代码）">
+<meta property="og:title" content="四面体上的高斯面积分方法（附C++代码）">
 <meta property="og:url" content="http://example.com/2021/10/08/triangle-gauss-integral/index.html">
 <meta property="og:site_name" content="融雪之前">
 <meta property="og:description" content="在有限元数值计算中，经常需要在四面体上进行面积分或体积分，积分方法通常选用的是高斯积分，在参考单元内定义一系列高斯积分点和与之对应的高斯积分权值。高斯积分策略分为两种，一种是将参考单元的积分点映射到实际单元中进行积分，另一种将实际单元上的积分映射到参考单元中进行计算，后者更为常用一些。本文主要描述了对于两个相邻四面体的交界面，当交界面左右两端定义的函数不相同时，两函数相乘在同一个面上的面积分计算方">
@@ -91,7 +91,7 @@
 <meta property="og:image" content="http://example.com/images/article/tetra_quad/tetra_mapping.jpg">
 <meta property="og:image" content="http://example.com/images/article/tetra_quad/quad_match.jpg">
 <meta property="article:published_time" content="2021-10-07T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-03-27T06:20:06.894Z">
+<meta property="article:modified_time" content="2022-03-27T08:47:03.800Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/article/tetra_quad/two_tetra_elems.jpg">
@@ -130,7 +130,7 @@
 
 
 
-  <title>四面体上的高斯面积分方法（附代码） | 融雪之前</title>
+  <title>四面体上的高斯面积分方法（附C++代码） | 融雪之前</title>
   
 
 
@@ -274,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">四面体上的高斯面积分方法（附代码）</h1>
+          <h1 class="post-title" itemprop="name headline">四面体上的高斯面积分方法（附C++代码）</h1>
         
 
         <div class="post-meta">
@@ -309,8 +309,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95/" itemprop="url" rel="index">
-                    <span itemprop="name">数值方法</span>
+                  <a href="/categories/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/" itemprop="url" rel="index">
+                    <span itemprop="name">数值计算</span>
                   </a>
                 </span>
 
@@ -517,6 +517,10 @@ $$
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2022/03/27/a-simple-geometery-problem/" rel="prev" title="一道有趣的中学几何题（附Matlab画动图代码）">
+                一道有趣的中学几何题（附Matlab画动图代码） <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -592,7 +596,7 @@ $$
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
